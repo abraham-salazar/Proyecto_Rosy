@@ -4,18 +4,20 @@
 #include <locale.h>
 void menu(int opc){
     	while (opc != 7){
-	printf("----------------------------------------\n");
-	printf("\tBIENVENIDO AL MENÚ\n");
-	printf("1.- Mostrar todos los contactos\n");
-	printf("2.- Buscar un registro\n");//Crear sub menú, 1 para que el parametro sea el nombre y el otro para que sea la clave
-	printf("3.- Ordenar alfabeticamente por clave, nombre o salario\n");
-	printf("4.- Insertar nuevos registros\n");
-	printf("5.- Eliminar un registro\n");//Crear submenu por clave o nombre
-	printf("6.- Modifica la clave\n"); //crear un submenu, 1 para nombre, 1 para salario y uno por clave
-	printf("7.- Salir\n");
-	printf("----------------------------------------\n");
-	scanf("%d", &opc);
+		    //system("cls");
+			printf("----------------------------------------\n");
+			printf("\tBIENVENIDO AL MENÚ\n");
+			printf("1.- Mostrar todos los contactos\n");
+			printf("2.- Buscar un registro\n");//Crear sub menú, 1 para que el parametro sea el nombre y el otro para que sea la clave
+			printf("3.- Ordenar alfabeticamente\n");
+			printf("4.- Insertar nuevos registros\n");
+			printf("5.- Eliminar un registro\n");//Crear submenu por clave o nombre
+			printf("6.- Modifica la clave\n"); //crear un submenu, 1 para nombre, 1 para salario y uno por clave
+			printf("7.- Salir\n");
+			printf("----------------------------------------\n");
+			scanf("%d", &opc);
 		if (opc == 1){
+			//system("cls");
 			printf("Mostrar todos los contactos\n");
 			//Aqui haremos para que se muestren todos los contactos
 			break;
@@ -42,7 +44,7 @@ void menu(int opc){
 		            printf("2.- Salir: \n");
 		            scanf("%d", &opc3);
 		            if(opc3 == 1){
-		                opc2 = 1;
+		            	//system("cls");
 		                break;
 		            }
 		            if(opc3 == 2){
@@ -66,6 +68,7 @@ void menu(int opc){
 		            printf("2.- Salir: \n");
 		            scanf("%d", &opc3);
 		            if(opc3 == 1){
+		            	//system("cls");
 		                break;
 		            }
 		            if(opc3 == 2){
@@ -104,6 +107,7 @@ void menu(int opc){
 		            printf("2.- Salir\n");
 		            scanf("%d", &opc3);
 		            if(opc3 == 1){
+					//system("cls");
 		                break;
 		            }
 		            if(opc3 == 2){
@@ -124,6 +128,7 @@ void menu(int opc){
 		            printf("2.- Salir\n");
 		            scanf("%d", &opc3);
 		            if(opc3 == 1){
+		            	//system("cls");
 		                break;
 		            }
 		            if(opc3 == 2){
@@ -144,6 +149,7 @@ void menu(int opc){
 		                printf("2.- Salir\n");
 		                scanf("%d", &opc3);
 		                if(opc3 == 1){
+		                	//system("cls");
 		                    break;
 		                }
 		                if(opc3 == 2){
@@ -152,6 +158,44 @@ void menu(int opc){
 		            }
 		        }
 		    }
+		}
+		if(opc == 4){
+			int opc2 = 0;
+			//system("cls");
+			printf("\tIngresar nuevos registros\n");
+			printf("1.- Ingresas un nuevo registro\n");
+			printf("2.- Salir\n");
+			scanf("%d", &opc2);
+			if(opc2 == 1){
+				int opc3 = 0;
+				while(opc3 != 2){
+				//system("cls");
+				char nombre[80];
+				int clave, salario;
+				printf("Ingrese el nombre del registro: \n");
+				scanf("%s", &nombre);
+				printf("Ingrese la clave de %s\n", nombre);
+				scanf("%d", &clave);
+				printf("Ingrese el salario de %s\n", nombre);
+				scanf("%d", &salario);
+				printf("Se registró a %s con la clave %d y su salario es $%d\n", nombre, clave, salario);	
+				//system("pause");
+				//system("cls");
+				printf("1.- Registrar otro\n");
+				printf("2.- Salir\n");
+				scanf("%d", &opc3);
+				if(opc3 == 1){
+					opc2 == 1;
+				}
+				if(opc3 == 2){
+					menu(opc);
+				}
+				}
+			
+			}
+			if(opc2 == 2){
+				menu(opc);
+			}
 		}
 		else if(opc != 7 & opc != 1 & opc != 2 & opc != 3 & opc != 4 & opc != 5 & opc != 6){
 		    printf("Opcion incorrecta\nIntente nuevamente.\n");
