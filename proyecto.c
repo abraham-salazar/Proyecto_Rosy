@@ -18,12 +18,14 @@ void menu(int opc){
 			scanf("%d", &opc);
 		if (opc == 1){
 			//system("cls");
+			printf("----------------------------------------\n");
 			printf("Mostrar todos los contactos\n");
 			//Aqui haremos para que se muestren todos los contactos
 			break;
 		}
 		if (opc == 2){
-            //system("cls");
+            //system("cls");			
+            printf("----------------------------------------\n");
 		    int opc2 = 0;
 		    while (opc2 != 3){
 		    printf("Seleccione una opcion: \n");
@@ -33,13 +35,14 @@ void menu(int opc){
             scanf("%d", &opc2);
 		    if(opc2 == 1){
                 int opc3 = 0, cadena = 0;
-		        while(opc3 != 2){
  		        //system("cls");
+                printf("----------------------------------------\n");
 		        printf("\tBuscar un registro por nombre\n");
 		        printf("Ingrese el nombre que deseaa buscar: \n");	
 		        scanf("%d", &cadena);
 		        //aqui para poner el scanf y hacer que busca la cadena de caracteres deseada
 		            //system("cls");
+                    while(opc3 != 2){
 		            printf("1.- Buscar otro: \n");
 		            printf("2.- Salir: \n");
 		            scanf("%d", &opc3);
@@ -51,17 +54,19 @@ void menu(int opc){
                         menu(opc);
 		            }
 		            else if(opc3 != 1 & opc3 != 2){
+            			printf("----------------------------------------\n");
 		                printf("Opcion incorrecta\nIntente nuevamente.\n");
 		        }
 		        
 		    }}
 		    if(opc2 == 2){
                 int opc3 = 0, cadena = 0;
-		        while(opc3 != 2){
  		        //system("cls");
+	            printf("----------------------------------------\n");
 		        printf("\tBuscar un registro por clave\n");
 		        printf("Ingrese la clave que deseaa buscar: \n");	
 		        scanf("%d", &cadena);
+		        while(opc3 != 2){
 		        //aqui para poner el scanf y hacer que busca la cadena de caracteres deseada
 		            //system("cls");
 		            printf("1.- Buscar otro: \n");
@@ -75,11 +80,16 @@ void menu(int opc){
                         menu(opc);
 		            }
 		            else if(opc3 != 1 & opc3 != 2){
+			            printf("----------------------------------------\n");
 		                printf("Opcion incorrecta\nIntente nuevamente.\n");
 		        }
 		        
 		    }
 		    }
+                else if(opc2 != 1 & opc2 != 2 & opc2 != 3){
+            			printf("----------------------------------------\n");
+		                printf("Opcion incorrecta\nIntente nuevamente.\n");
+		        }
 		        
 		    }
 		    
@@ -113,6 +123,10 @@ void menu(int opc){
 		            if(opc3 == 2){
 		                menu(opc);
 		            }
+		            else if(opc3 != 1 & opc3 != 2){
+		                printf("----------------------------------------\n");
+		                printf("Opcion incorrecta\nIntente nuevamente.\n");
+		        }
 		        }
 		        }
 		        if(opc2 == 2){
@@ -134,6 +148,10 @@ void menu(int opc){
 		            if(opc3 == 2){
 		                menu(opc);
 		            }
+		            else if(opc3 != 1 & opc3 != 2){
+            			printf("----------------------------------------\n");
+		                printf("Opcion incorrecta\nIntente nuevamente.\n");
+		        }
 		        }
 		        }
 		        if(opc2 == 3){
@@ -155,7 +173,15 @@ void menu(int opc){
 		                if(opc3 == 2){
 		                    menu(opc);
 		                }
+		                else if(opc3 != 1 & opc3 != 2){
+                			printf("----------------------------------------\n");
+		                    printf("Opcion incorrecta\nIntente nuevamente.\n");
+		                    }
 		            }
+		        }
+		            else if(opc2 != 1 & opc2 != 2 & opc2 != 3 & opc2 != 4){
+            			printf("----------------------------------------\n");
+		                printf("Opcion incorrecta\nIntente nuevamente.\n");
 		        }
 		    }
 		}
@@ -173,7 +199,7 @@ void menu(int opc){
 				char nombre[80];
 				int clave, salario;
 				printf("Ingrese el nombre del registro: \n");
-				scanf("%s", &nombre);
+				scanf("%s", nombre);
 				printf("Ingrese la clave de %s\n", nombre);
 				scanf("%d", &clave);
 				printf("Ingrese el salario de %s\n", nombre);
@@ -185,11 +211,15 @@ void menu(int opc){
 				printf("2.- Salir\n");
 				scanf("%d", &opc3);
 				if(opc3 == 1){
-					opc2 == 1;
+					opc2 = 1;
 				}
 				if(opc3 == 2){
 					menu(opc);
 				}
+		        else if(opc3 != 1 & opc3 != 2){
+        			printf("----------------------------------------\n");
+		            printf("Opcion incorrecta\nIntente nuevamente.\n");
+		        }
 				}
 			
 			}
@@ -197,7 +227,31 @@ void menu(int opc){
 				menu(opc);
 			}
 		}
+		if(opc == 5){
+		    int opc2 = 0, ejemplo = 0;
+		    while(opc2 != 2){
+		    //system("cls");
+		    printf("\tBorrar registro\n");
+		    scanf("%d", &ejemplo);
+		    printf("Se ha borrado el registro\n");
+		    //system("cls");
+		    printf("1.- Borrar otro registro\n");
+		    printf("2.- Salir\n");
+		    scanf("%d", &opc2); 
+		    if(opc2 == 1){
+		        //system("cls");
+    		    }
+		    if(opc2 == 2){
+		        menu(opc);
+		    }
+            else if(opc2 != 1 & opc2 != 2){
+    			printf("----------------------------------------\n");
+		        printf("Opcion incorrecta\nIntente nuevamente.\n");
+		        }
+		    }
+		}
 		else if(opc != 7 & opc != 1 & opc != 2 & opc != 3 & opc != 4 & opc != 5 & opc != 6){
+			printf("----------------------------------------\n");
 		    printf("Opcion incorrecta\nIntente nuevamente.\n");
 		}
 		}
