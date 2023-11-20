@@ -448,7 +448,7 @@ void menu(int opc){
 		}
 		else if(opc != 7 & opc != 1 & opc != 2 & opc != 3 & opc != 4 & opc != 5 & opc != 6){
 			printf("----------------------------------------\n");
-		    printf("Opcion incorrecta\nIntente nuevamente.srtygfghdfg\n");
+		    printf("Opcion incorrecta\nIntente nuevamente.\n");
 		}
 		}
 	
